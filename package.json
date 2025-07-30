@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.27.1",
+    "@types/dompurify": "^3.0.5",
     "@uiw/react-md-editor": "^4.0.8",
+    "dompurify": "^3.2.6",
+    "isomorphic-dompurify": "^2.26.0",
     "lucide-react": "^0.438.0",
     "next": "14.2.7",
     "react": "^18",

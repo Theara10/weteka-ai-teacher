@@ -9,21 +9,22 @@ import { ArrowLeft, BookOpen, FileText, Users, Zap } from "lucide-react";
 const AboutPage = () => {
   const { navigateBack } = useNavigation();
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-theme-bg transition-theme">
       {/* Header */}
-      <div className="border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-6 py-4">
+      <div className="border-b border-theme-border">
+        <div className="max-w-full mx-auto px-4 sm:px-6 py-4">
           <div className="flex items-center justify-between">
             <button 
               onClick={navigateBack}
-              className="flex items-center space-x-2 text-gray-600 hover:text-gray-800 transition-colors"
+              className="flex items-center space-x-2 text-theme-text-muted hover:text-theme-text transition-colors min-w-[44px] min-h-[44px] flex-shrink-0"
+              aria-label="ត្រលប់ទៅការសន្ទនា"
             >
               <ArrowLeft className="w-4 h-4" />
-              <span className="text-sm">ត្រលប់ទៅការសន្ទនា</span>
+              <span className="text-sm hidden sm:inline">ត្រលប់ទៅការសន្ទនា</span>
             </button>
             
             <div className="flex items-center space-x-2">
-              <div className="w-6 h-6 bg-blue-600 rounded flex items-center justify-center">
+              <div className="w-6 h-6 bg-theme-accent rounded flex items-center justify-center flex-shrink-0">
                 <Image
                   src="/weteka-logo.png"
                   width={16}
@@ -32,7 +33,7 @@ const AboutPage = () => {
                   className="w-4 h-4 invert"
                 />
               </div>
-              <span className="text-sm font-medium text-gray-900">Weteka AI</span>
+              <span className="text-sm font-medium text-theme-text">Weteka AI</span>
             </div>
           </div>
         </div>

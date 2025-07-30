@@ -5,10 +5,9 @@ import React, { useEffect } from 'react';
 const EnvDebug: React.FC = () => {
   useEffect(() => {
     console.log('=== Environment Debug ===');
-    console.log('NEXT_PUBLIC_API_KEY present:', !!process.env.NEXT_PUBLIC_API_KEY);
-    console.log('NEXT_PUBLIC_API_KEY length:', process.env.NEXT_PUBLIC_API_KEY?.length);
-    console.log('NEXT_PUBLIC_API_KEY starts correctly:', process.env.NEXT_PUBLIC_API_KEY?.startsWith('sk-ant'));
-    console.log('All NEXT_PUBLIC vars:', Object.keys(process.env).filter(key => key.startsWith('NEXT_PUBLIC')));
+    console.log('Client-side environment variables:', Object.keys(process.env).filter(key => key.startsWith('NEXT_PUBLIC')));
+    console.log('API key is now securely handled server-side');
+    console.log('Client no longer has direct access to API key');
   }, []);
 
   return null;

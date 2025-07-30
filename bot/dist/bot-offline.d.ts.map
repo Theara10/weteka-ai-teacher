@@ -1,0 +1,1 @@
+{"version":3,"file":"bot-offline.d.ts","sourceRoot":"","sources":["../src/bot-offline.ts"],"names":[],"mappings":"AAMA,qBAAa,gBAAgB;IAC3B,OAAO,CAAC,SAAS,CAAY;IAC7B,OAAO,CAAC,cAAc,CAAiB;IACvC,OAAO,CAAC,SAAS,CAAkB;;IAO7B,MAAM,IAAI,OAAO,CAAC,IAAI,CAAC;IAkDvB,MAAM,CAAC,OAAO,EAAE,MAAM,GAAG,OAAO,CAAC,MAAM,CAAC;CA2B/C"}

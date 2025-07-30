@@ -80,7 +80,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
       {/* Help Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-20 right-4 z-50 w-12 h-12 bg-blue-500 hover:bg-blue-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
+        className="fixed bottom-20 right-4 z-50 w-12 h-12 bg-theme-accent hover:bg-theme-accent-hover text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center"
         title="How to use"
       >
         <HelpCircle className="w-5 h-5" />
@@ -88,19 +88,19 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
 
       {/* Help Modal */}
       {isOpen && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full max-h-[80vh] overflow-y-auto">
+        <div className="fixed inset-0 bg-black bg-opacity-50 dark:bg-opacity-70 flex items-center justify-center z-50 p-4">
+          <div className="bg-theme-bg border border-theme-border rounded-2xl max-w-md w-full max-h-[80vh] overflow-y-auto">
             {/* Header */}
-            <div className="sticky top-0 bg-white border-b border-gray-100 px-6 py-4 rounded-t-2xl">
+            <div className="sticky top-0 bg-theme-bg border-b border-theme-border-light px-6 py-4 rounded-t-2xl">
               <div className="flex items-center justify-between">
-                <h2 className="text-xl font-bold text-gray-900">
+                <h2 className="text-xl font-bold text-theme-text">
                   របៀបប្រើប្រាស់ Weteka AI
                 </h2>
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="p-1 hover:bg-gray-100 rounded-full transition-colors"
+                  className="p-1 hover:bg-theme-bg-secondary rounded-full transition-colors"
                 >
-                  <X className="w-5 h-5 text-gray-500" />
+                  <X className="w-5 h-5 text-theme-text-muted" />
                 </button>
               </div>
             </div>
@@ -111,7 +111,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mx-auto mb-4 flex items-center justify-center">
                   <span className="text-2xl text-white">🤖</span>
                 </div>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-theme-text-secondary text-sm leading-relaxed">
                   Weteka AI ជំនួយការ អាចជួយអ្នកក្នុងការរៀន ការងារ និងកិច្ចការផ្សេងៗជាច្រើន
                 </p>
               </div>
@@ -121,19 +121,19 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
                 {helpItems.map((item, index) => (
                   <div
                     key={index}
-                    className="bg-gray-50 rounded-xl p-4 border border-gray-100"
+                    className="bg-theme-bg-secondary rounded-xl p-4 border border-theme-border-light"
                   >
-                    <h3 className="font-semibold text-gray-900 mb-2 text-sm">
+                    <h3 className="font-semibold text-theme-text mb-2 text-sm">
                       {item.title}
                     </h3>
-                    <p className="text-gray-600 text-xs mb-3 leading-relaxed">
+                    <p className="text-theme-text-secondary text-xs mb-3 leading-relaxed">
                       {item.description}
                     </p>
-                    <div className="bg-white border border-gray-200 rounded-lg p-3 space-y-2">
-                      <div className="text-xs font-medium text-gray-700 mb-2">ឧទាហរណ៍:</div>
+                    <div className="bg-theme-bg border border-theme-border rounded-lg p-3 space-y-2">
+                      <div className="text-xs font-medium text-theme-text-secondary mb-2">ឧទាហរណ៍:</div>
                       {item.examples.map((example, idx) => (
-                        <div key={idx} className="text-xs text-blue-600 bg-blue-50 p-2 rounded border-l-2 border-blue-200">
-                          "{example}"
+                        <div key={idx} className="text-xs text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 p-2 rounded border-l-2 border-blue-200 dark:border-blue-800">
+                          &ldquo;{example}&rdquo;
                         </div>
                       ))}
                     </div>
@@ -152,10 +152,10 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
                     <p className="text-xs text-green-700 mb-2">ផ្តល់ព័ត៌មានលម្អិត និងបរិបទច្បាស់លាស់</p>
                     <div className="space-y-1 text-xs">
                       <div className="bg-red-50 p-2 rounded border-l-2 border-red-200">
-                        <span className="text-red-600 font-medium">❌ មិនល្អ:</span> <span className="text-gray-700">"ជួយខ្ញុំសរសេរ"</span>
+                        <span className="text-red-600 font-medium">❌ មិនល្អ:</span> <span className="text-gray-700">&ldquo;ជួយខ្ញុំសរសេរ&rdquo;</span>
                       </div>
                       <div className="bg-green-50 p-2 rounded border-l-2 border-green-200">
-                        <span className="text-green-600 font-medium">✅ ល្អ:</span> <span className="text-gray-700">"ជួយខ្ញុំសរសេរសំបុត្រស្នើសុំការងារមុខតំណែងគ្រូបង្រៀនគណិតវិទ្យា"</span>
+                        <span className="text-green-600 font-medium">✅ ល្អ:</span> <span className="text-gray-700">&ldquo;ជួយខ្ញុំសរសេរសំបុត្រស្នើសុំការងារមុខតំណែងគ្រូបង្រៀនគណិតវិទ្យា&rdquo;</span>
                       </div>
                     </div>
                   </div>
@@ -164,7 +164,7 @@ const HelpMenu: React.FC<HelpMenuProps> = ({ isVisible = true }) => {
                     <h4 className="font-medium text-green-800 text-xs mb-1">២. ផ្តល់បរិបទ និងឧទាហរណ៍</h4>
                     <p className="text-xs text-green-700">បញ្ជាក់អំពីគោលដៅ ក្រុមទាំងគន្លង និងតម្រូវការពិសេស</p>
                     <div className="mt-2 text-xs">
-                      <span className="text-green-600">✅ ឧទាហរណ៍:</span> <span className="text-gray-600">"សរសេរសំបុត្រផ្លូវការជូនដល់ក្រសួងអប់រំ ស្នើសុំការឯកភាពកែតម្រូវកម្មវិធីសិក្សា សម្រាប់សាលាបឋមសិក្សា"</span>
+                      <span className="text-green-600">✅ ឧទាហរណ៍:</span> <span className="text-gray-600">&ldquo;សរសេរសំបុត្រផ្លូវការជូនដល់ក្រសួងអប់រំ ស្នើសុំការឯកភាពកែតម្រូវកម្មវិធីសិក្សា សម្រាប់សាលាបឋមសិក្សា&rdquo;</span>
                     </div>
                   </div>
 

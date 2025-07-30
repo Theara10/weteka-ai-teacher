@@ -23,7 +23,7 @@ const ChatStateIndicator: React.FC = () => {
   if (!isReturning) return null;
 
   return (
-    <div className="fixed top-4 right-4 z-50 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm animate-pulse">
+    <div className="fixed top-4 right-4 z-50 bg-theme-accent text-white px-4 py-2 rounded-lg shadow-lg text-sm animate-pulse">
       ត្រលប់មកការសន្ទនា
     </div>
   );

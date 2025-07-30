@@ -1,0 +1,29 @@
+{
+  "name": "Weteka AI ជំនួយការ",
+  "short_name": "Weteka AI",
+  "description": "ជំនួយការអប់រំ និងកិច្ចការរដ្ឋបាលដ៏ទូលំទូលាយសម្រាប់កម្ពុជា",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/weteka-logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/weteka-logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["education", "productivity", "utilities"],
+  "lang": "km",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

@@ -1,0 +1,40 @@
+{
+  "name": "weteka-ai-telegram-bot",
+  "version": "1.0.0",
+  "description": "Weteka AI Telegram Bot for Cambodian learners",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "dev-offline": "tsx watch src/offline-mode.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "test-ai": "node test-ai.js",
+    "network-test": "node network-test.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.27.1",
+    "telegraf": "^4.16.3",
+    "dotenv": "^16.4.5",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.9",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.3",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/eslint-plugin": "^7.15.0",
+    "@typescript-eslint/parser": "^7.15.0"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "ai",
+    "cambodia",
+    "khmer",
+    "education"
+  ],
+  "author": "Weteka AI Team",
+  "license": "MIT"
+}
