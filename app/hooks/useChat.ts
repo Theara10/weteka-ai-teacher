@@ -87,7 +87,7 @@ export const useChat = () => {
     };
     
     initializeData();
-  }, []); // Remove dependencies to prevent re-initialization
+  }, [trackError, trackPerformance]); // Add dependencies
 
   // Create stable track functions with useCallback to prevent effect re-runs
   const stableTrackError = useCallback((type: string, details: string) => {
@@ -191,7 +191,7 @@ export const useChat = () => {
       };
       setChatHistories(prev => [newChat, ...prev]);
     }
-  }, []); // Empty deps since we use refs
+  }, [generateChatTitle]); // Add generateChatTitle dependency
 
   // Create stable tracking function
   const stableTrackFeatureUsed = useCallback((feature: string, details?: any) => {

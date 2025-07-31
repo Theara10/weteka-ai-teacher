@@ -115,7 +115,7 @@ export class SessionManager {
 
   private cleanupExpiredSessions(): void {
     const now = Date.now();
-    for (const [userId, session] of this.sessions.entries()) {
+    for (const [userId, session] of Array.from(this.sessions.entries())) {
       if (now - session.lastActivity > this.SESSION_TIMEOUT) {
         this.sessions.delete(userId);
       }
@@ -130,7 +130,7 @@ export class SessionManager {
     let activeLast24h = 0;
     let activeLast1h = 0;
     
-    for (const session of this.sessions.values()) {
+    for (const session of Array.from(this.sessions.values())) {
       const hoursSinceActive = (now - session.lastActivity) / (60 * 60 * 1000);
       if (hoursSinceActive < 24) activeLast24h++;
       if (hoursSinceActive < 1) activeLast1h++;
